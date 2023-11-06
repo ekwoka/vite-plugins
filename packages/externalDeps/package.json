@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-external-deps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vite Plugin to externalize all dependencies for use by libraries",
   "author": "Eric Kwoka <eric@thekwoka.net> (https://thekwoka.net/)",
   "license": "MIT",
