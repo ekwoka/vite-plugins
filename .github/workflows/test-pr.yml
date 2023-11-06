@@ -45,6 +45,7 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             ${{ '**/node_modules' }}
+            ${{ '**/dist' }}
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
@@ -88,6 +89,7 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             ${{ '**/node_modules' }}
+            ${{ '**/dist' }}
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
@@ -134,6 +136,7 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             ${{ '**/node_modules' }}
+            ${{ '**/dist' }}
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
@@ -175,6 +178,7 @@ jobs:
           path: |
             ${{ steps.pnpm-cache.outputs.STORE_PATH }}
             ${{ '**/node_modules' }}
+            ${{ '**/dist' }}
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
