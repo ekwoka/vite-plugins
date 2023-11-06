@@ -1,12 +1,12 @@
 {
   "externalDeps": {
     "minified": {
-      "pretty": "757 B",
-      "raw": 757
+      "pretty": "816 B",
+      "raw": 816
     },
     "brotli": {
-      "pretty": "380 B",
-      "raw": 380
+      "pretty": "391 B",
+      "raw": 391
     }
   },
   "workspacesSource": {

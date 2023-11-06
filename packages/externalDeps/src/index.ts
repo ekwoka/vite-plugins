@@ -21,9 +21,13 @@ export const ExternalDeps = (): Plugin => ({
   resolveId(id) {
     if (id.startsWith('.') || id.startsWith('/')) return null;
     if (id.startsWith('node:')) return { id, external: true };
-    if (import.meta.resolve?.(id).includes('node_modules'))
-      return { id, external: true };
     if (isDep(id)) return { id, external: true };
+    try {
+      if (import.meta.resolve?.(id).includes('node_modules'))
+        return { id, external: true };
+    } catch (e) {
+      return null;
+    }
     return null;
   },
 });
