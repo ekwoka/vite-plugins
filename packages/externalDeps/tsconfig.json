@@ -2,11 +2,7 @@
   "include": ["src/**/*"],
   "exclude": ["**/node_modules", "**/dist"],
   "compilerOptions": {
-    "types": [
-      "vitest/importMeta",
-      "vitest/globals",
-      "testing-library-alpine/globals"
-    ],
+    "types": ["vitest/importMeta", "vitest/globals"],
     "allowJs": true,
     "declaration": true,
     "declarationMap": true,

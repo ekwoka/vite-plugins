@@ -1,8 +1,8 @@
 {
-  "name": "vite-plugin-access-workspace-source",
+  "name": "vite-plugin-external-deps",
   "private": true,
   "version": "0.0.1",
-  "description": "Vite Plugin to access monorepo source files in dev contexts (testing, etc)",
+  "description": "Vite Plugin to externalize all dependencies for use by libraries",
   "author": "Eric Kwoka <eric@thekwoka.net> (https://thekwoka.net/)",
   "license": "MIT",
   "exports": {
@@ -34,7 +34,7 @@
     "vite",
     "library",
     "plugin",
-    "testing"
+    "publishing"
   ],
   "devDependencies": {
     "vite-plugin-access-workspace-source": "workspace:*",

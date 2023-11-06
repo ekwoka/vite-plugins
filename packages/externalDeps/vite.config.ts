@@ -1,11 +1,12 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
-import WorkspaceSource from 'vite-plugin-access-workspace-source';
 import dts from 'vite-plugin-dts';
-import ExternalDeps from 'vite-plugin-external-deps';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { resolve } from 'node:path';
+
+import WorkspaceSource from '../workspacesSource/src';
+import ExternalDeps from './src';
 
 export default defineConfig({
   root: resolve(__dirname),

@@ -2,11 +2,11 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import WorkspaceSource from 'vite-plugin-access-workspace-source';
-import ExternalDeps from 'vite-plugin-external-deps';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { resolve } from 'node:path';
+
+import ExternalDeps from '../externalDeps/src';
+import WorkspaceSource from './src';
 
 export default defineConfig({
   root: resolve(__dirname),

@@ -1,22 +1,22 @@
 {
-  "vite-plugin-access-workspace-source": {
+  "externalDeps": {
     "minified": {
-      "pretty": "1.1 kB",
-      "raw": 1101
+      "pretty": "757 B",
+      "raw": 757
     },
     "brotli": {
-      "pretty": "535 B",
-      "raw": 535
+      "pretty": "380 B",
+      "raw": 380
     }
   },
-  "vite-plugin-external-deps": {
+  "workspacesSource": {
     "minified": {
-      "pretty": "753 B",
-      "raw": 753
+      "pretty": "1.1 kB",
+      "raw": 1105
     },
     "brotli": {
-      "pretty": "377 B",
-      "raw": 377
+      "pretty": "556 B",
+      "raw": 556
     }
   }
 }
