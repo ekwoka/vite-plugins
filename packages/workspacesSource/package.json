@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-access-workspace-source",
+  "name": "vite-plugin-workspace-source",
   "private": true,
   "version": "0.0.1",
   "description": "Vite Plugin to access monorepo source files in dev contexts (testing, etc)",
@@ -36,7 +36,7 @@
     "testing"
   ],
   "devDependencies": {
-    "vite-plugin-access-workspace-source": "workspace:*",
+    "vite-plugin-workspace-source": "workspace:*",
     "vite-plugin-external-deps": "workspace:*"
   }
 }

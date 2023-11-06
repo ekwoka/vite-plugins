@@ -65,22 +65,22 @@ if (import.meta.vitest) {
       expect(isInWorkspace('vite')).toBe(false);
     });
     it('identifies modules in this dir', () => {
-      expect(isInThisDir()('vite-plugin-access-workspace-source')).toBe(true);
+      expect(isInThisDir()('vite-plugin-workspace-source')).toBe(true);
       if (process.cwd().endsWith('vite-plugins'))
         expect(isInThisDir()('vite')).toBe(true);
       else expect(isInThisDir()('vite')).toBe(false);
     });
     it('isInRoot', () => {
-      expect(
-        isInRoot('vite-plugins')('vite-plugin-access-workspace-source'),
-      ).toBe(true);
+      expect(isInRoot('vite-plugins')('vite-plugin-workspace-source')).toBe(
+        true,
+      );
       expect(isInRoot('vite-plugins/packages')('vite')).toBe(false);
     });
     it('hasPrefix', () => {
       expect(hasPrefix('@ekwoka')('vite')).toBe(false);
-      expect(
-        hasPrefix('@ekwoka')('@ekwoka/vite-plugin-access-workspace-source'),
-      ).toBe(true);
+      expect(hasPrefix('@ekwoka')('@ekwoka/vite-plugin-workspace-source')).toBe(
+        true,
+      );
     });
     it('creates checks', async () => {
       const checks = await createChecks({
@@ -92,9 +92,7 @@ if (import.meta.vitest) {
         true,
       );
       expect(
-        checks.some((check) =>
-          check('@ekwoka/vite-plugin-access-workspace-source'),
-        ),
+        checks.some((check) => check('@ekwoka/vite-plugin-workspace-source')),
       ).toBe(true);
     });
   });

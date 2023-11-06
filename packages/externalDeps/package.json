@@ -37,7 +37,7 @@
     "publishing"
   ],
   "devDependencies": {
-    "vite-plugin-access-workspace-source": "workspace:*",
+    "vite-plugin-workspace-source": "workspace:*",
     "vite-plugin-external-deps": "workspace:*"
   }
 }
