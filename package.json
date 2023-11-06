@@ -1,0 +1,83 @@
+{
+  "name": "create-kwoka-pkg",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run -r build",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint --fix ./src; prettier --write ./src --log-level error",
+    "lint:check": "eslint --max-warnings 10 ./src && prettier --check ./src",
+    "prebuild": "rm -rf dist",
+    "prepare": "husky install",
+    "size": "node scripts/esbuild.js",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.2.1",
+    "@types/node": "20.8.10",
+    "@typescript-eslint/eslint-plugin": "6.9.1",
+    "@typescript-eslint/parser": "6.9.1",
+    "@vitest/coverage-c8": "0.33.0",
+    "esbuild": "0.19.5",
+    "eslint": "8.53.0",
+    "eslint-plugin-filename-export": "1.0.4",
+    "husky": "8.0.3",
+    "lint-staged": "15.0.2",
+    "prettier": "3.0.3",
+    "pretty-bytes": "6.1.1",
+    "typescript": "5.2.2",
+    "vite": "4.5.0",
+    "vite-plugin-access-workspace-source": "workspace:*",
+    "vite-plugin-dts": "3.6.3",
+    "vite-plugin-external-deps": "workspace:*",
+    "vite-tsconfig-paths": "4.2.1",
+    "vitest": "0.34.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports"
+    ],
+    "importOrder": [
+      "node:.*",
+      "@/lib(.*)$",
+      "@/utils(.*)$",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript@<5.1.6": "^5.1.6",
+      "semver@>=6.0.0 <6.3.1": ">=6.3.1",
+      "semver@>=7.0.0 <7.5.2": ">=7.5.2"
+    }
+  }
+}

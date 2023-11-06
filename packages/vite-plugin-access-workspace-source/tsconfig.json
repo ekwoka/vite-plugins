@@ -1,0 +1,13 @@
+{
+  "include": ["src/**/*", "tests/**/*.test.ts"],
+  "exclude": ["**/node_modules", "**/dist"],
+  "compilerOptions": {
+    "types": ["vitest/importMeta", "vitest/globals"],
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "target": "ESNext"
+  }
+}
