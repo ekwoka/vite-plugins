@@ -2,13 +2,11 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import WorkspaceSource from 'vite-plugin-access-workspace-source';
+import ExternalDeps from 'vite-plugin-external-deps';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
-import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-
-const pkg = JSON.parse(
-  readFileSync(new URL('./package.json', import.meta.url)).toString(),
-);
 
 export default defineConfig({
   root: resolve(__dirname),
@@ -18,20 +16,8 @@ export default defineConfig({
       tsconfigPath: resolve(__dirname, 'tsconfig.json'),
     }),
     tsconfigPaths(),
-    {
-      name: 'externalize deps',
-      apply: 'build',
-      enforce: 'pre',
-      resolveId(id) {
-        if (
-          id.startsWith('node:') ||
-          import.meta.resolve?.(id).includes('node_modules')
-        ) {
-          return { id, external: true };
-        }
-        return null;
-      },
-    },
+    ExternalDeps(),
+    WorkspaceSource(),
   ],
   define: {
     'import.meta.vitest': 'undefined',
