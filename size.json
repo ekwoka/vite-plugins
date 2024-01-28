@@ -11,12 +11,12 @@
   },
   "workspacesSource": {
     "minified": {
-      "pretty": "1.1 kB",
-      "raw": 1105
+      "pretty": "1.13 kB",
+      "raw": 1125
     },
     "brotli": {
-      "pretty": "556 B",
-      "raw": 556
+      "pretty": "549 B",
+      "raw": 549
     }
   }
 }

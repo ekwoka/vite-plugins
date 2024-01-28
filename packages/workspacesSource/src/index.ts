@@ -11,6 +11,7 @@ export const WorkspaceSource = (opts: WorkspaceSourceOptions = {}) => {
     async resolveId(id: string) {
       if (id.startsWith('.') || id.startsWith('/')) return null; // relative paths
       if (isNodeModules(id)) return null; // workspace deps don't resolve to node_modules
+      if (id.endsWith('/src')) return null; // don't add /src to the end of the id if it's already there
       if ((await checks).some((check) => check(id))) return `${id}/src`; // add /src to the end of the id to access the source files
       return null;
     },
