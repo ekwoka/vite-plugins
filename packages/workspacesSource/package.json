@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-workspace-source",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vite Plugin to access monorepo source files in dev contexts (testing, etc)",
   "author": "Eric Kwoka <eric@thekwoka.net> (https://thekwoka.net/)",
   "license": "MIT",
